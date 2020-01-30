@@ -53,3 +53,28 @@ checkAge();
 */
 /* Task4 */
 
+class MonthException{
+    constructor(message){
+        this.name = message;
+    }
+    
+}
+function showMonthName(month){
+try{
+    if(month <= 12 && month >= 1){
+        
+            let monthName = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+            let i = --month;
+            alert(monthName[i]);
+        
+    }else{
+        throw exeption
+    }
+
+}catch(exeption){
+   
+    var errorMessage = new MonthException("Incorrect month number");
+    alert(errorMessage.name)
+    }
+}
+showMonthName("-3");
