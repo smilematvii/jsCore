@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+<!-- Task1 -->
+<!--
+<div id="test">First</div>
+
+<script>
+    document.getElementById("test").innerHTML = "Last";
+    alert(document.getElementsByTagName("div").innerHTML);
+</script>
+-->
+<!-- Task2 -->
+<!--
+<img class="image" src="dog.jpg">
+
+<script>
+    
+    document.body.firstElementChild.setAttribute("src", "cat.jpg");
+    alert(document.body.firstElementChild.outerHTML);
+
+</script>
+-->
+
+<!-- Task3 -->
+<!--
+<h2>Article header</h2>      
+<div id="text">
+    <p>First paragraph</p>
+    <p>Second paragraph</p>
+    <p>Third paragraph</p>
+</div>
+<p>Another text</p>
+
+<script>
+   let myNodelist = document.querySelectorAll("p");
+   alert(
+       "Selector text " + [0] + ": " + myNodelist[0].innerHTML + "\n\r" +
+       "Selector text " + [1] + ": " + myNodelist[1].innerHTML + "\n\r" +
+       "Selector text " + [2] + ": " + myNodelist[2].innerHTML);
+</script>
+-->
+
+<!-- Task4 -->
+<!--
+<ul id = "list">
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+    <li>5</li>
+</ul>
+
+<script>
+    /* First type */
+
+    let list = document.getElementById('list').children;
+    alert(list[0].innerHTML + ", " + list[4].innerHTML + ", " + 
+    list[1].innerHTML + ", " + list[3].innerHTML + ", " + list[2].innerHTML);
+    
+    /* Second type */
+
+    let list1 = document.querySelectorAll('li');
+    alert(list1[0].innerHTML + ", " + list1[4].innerHTML + ", " + 
+    list1[1].innerHTML + ", " + list1[3].innerHTML + ", " + list1[2].innerHTML);
+</script> 
+-->
+
+<!-- Task5 -->
+<!--
+<h1 id="one">I'am a big header!!!</h1>
+<div id="myDiv">
+    <p>First paragraph</p>
+    <p>Second paragraph</p>
+    <p>Third paragraph</p>
+    <p>Fourth paragraph</p>
+</div>
+<ul id="myList">
+    <li>Make</li>
+    <li>me</li>
+    <li>horizontal!</li>
+</ul>
+<span>Make me invisible, please!</span>
+
+<script>
+    
+    document.querySelector("h1").style.backgroundColor = "green";
+    document.querySelectorAll("p")[0].style.fontWeight = "bold";
+    document.querySelectorAll("p")[1].style.color = "red";
+    document.querySelectorAll("p")[2].style.textDecoration = "underline";
+    document.querySelectorAll("p")[3].style.fontStyle = "italic";
+    let list = document.querySelectorAll("li");
+    list[0].style.display = "inline";
+    list[1].style.display = "inline";
+    list[2].style.display = "inline";
+    list[2].innerHTML = "vertical!";
+    document.querySelector("span").style.display = "none";
+
+</script>
+-->
+
+<!-- Task6 -->
+<!--
+<input type="text" id="input1" value="Text1">
+<input type="text" id="input2" value="Text2">
+
+<script>
+
+    let input1 = document.getElementById("input1");
+    let input2 = document.getElementById("input2");
+
+    input1.setAttribute("value", prompt("Type your name"));
+    input2.setAttribute("value", prompt("Type your surname"));
+
+    let input2Value = input2.getAttribute("value");
+    input2.setAttribute("value", input1.getAttribute("value"));
+    input1.setAttribute("value", input2Value);
+
+</script>
+-->
+
+<!-- Task7 -->
+
+
+</body>
+</html>
