@@ -67,9 +67,17 @@
     
     /* Second type */
 
-    let list1 = document.querySelectorAll('li');
-    alert(list1[0].innerHTML + ", " + list1[4].innerHTML + ", " + 
-    list1[1].innerHTML + ", " + list1[3].innerHTML + ", " + list1[2].innerHTML);
+    // let list1 = document.querySelectorAll('li');
+    // alert(list1[0].innerHTML + ", " + list1[4].innerHTML + ", " + 
+    // list1[1].innerHTML + ", " + list1[3].innerHTML + ", " + list1[2].innerHTML);
+
+    let list2 = document.getElementById('list');
+    alert(list2.firstElementChild.innerHTML + ", " + 
+    list2.lastElementChild.innerHTML + ", " + 
+    list2.firstElementChild.nextElementSibling.innerHTML + ", " + 
+    list2.lastElementChild.previousElementSibling.innerHTML + ", " + 
+    list2.firstElementChild.nextElementSibling.nextElementSibling.innerHTML);
+
 </script> 
 -->
 
@@ -128,6 +136,17 @@
 
 <!-- Task7 -->
 
+<script>
+    let main = document.createElement("main");
+    main.className = "mainClass check item";
+    document.getElementsByTagName("body")[0].append(main);
+    let div = document.createElement("div");
+    div.id = "myDiv";
+    document.getElementsByTagName("main")[0].prepend(div);
+    let p = document.createElement("p");
+    p.innerHTML = "First paragraph";
+    myDiv.prepend(p);
+</script>
 
 </body>
 </html>
