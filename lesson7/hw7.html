@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- Task1 -->
+
+    <!-- <script>
+        let openTab = window.open("target:blank", "empty tab", "width=300,height=300");
+        setTimeout(function(){ openTab.resizeTo(500, 500) 
+            setTimeout(function(){ openTab.moveTo(200, 200) 
+                setTimeout(function(){ openTab.close() }, 2000);
+            }, 2000);
+        }, 2000);   
+    </script> -->
+
+    <!-- Task2 -->
+
+    <!-- <p id ='text'>I learning JavaScript events!</p> 
+    <div>
+	    <button onclick = "changeCSS()">Change style!</button>
+    </div>
+    <script>
+        function changeCSS(){
+            let pValue = document.getElementById("text");
+            pValue.style.color = "orange";
+            pValue.style.fontSize = "20px";
+            pValue.style.fontFamily = "Comic Sans MS";
+        }
+    </script> -->
+
+    <!-- Task3 -->
+
+    <!-- <div>
+        <button id = "btn1">Click to make the page blue.</button>
+        <button id = "btn2">Double-clikc to make the page pink.</button>
+        <button id = "btn3">Clikc and hold to make the page brown.</button>
+        <a id = "link1" href = "#">Hover over to make page yellow</a>
+    </div>
+    <script>
+        let page = document.querySelector("body").style;
+    function makeBlue(){
+        page.backgroundColor = "blue";
+    }
+    function makePink(){
+        page.backgroundColor = "pink";
+    }
+    function makeBrown(){
+        page.backgroundColor = "saddlebrown";
+    }
+    function makeWhite(){
+        page.backgroundColor = "white";
+    }
+    function makeYellow(){
+        page.backgroundColor = "yellow";
+    }
+    function makeWhite2(){
+        page.backgroundColor = "white";
+    }
+    btn1.addEventListener("click", makeBlue);
+    btn2.addEventListener("dblclick", makePink);
+    btn3.addEventListener("mousedown", makeBrown);
+    btn3.addEventListener("mouseup", makeWhite);
+    link1.addEventListener("mouseenter", makeYellow);
+    link1.addEventListener("mouseleave", makeWhite2);
+    </script> -->
+
+<!-- Task4 -->
+
+<!-- <select id="names">
+    <option value="peter" >Peter</option>
+    <option value="john" >John</option>
+    <option value="alice" >Alice</option>
+    <option value="aleks" >Aleks</option>
+    <option value="iren" >Iren</option>
+</select>
+<button id="deleteBtn">Chouse and Delete</button>
+
+<script>
+
+function deleteName(){  
+
+    let select = document.querySelectorAll("option");  
+    
+    for (let i = 0; i < select.length; i++) {
+        if (select[i].selected === true){
+            select[i].remove();
+        }
+    }
+}
+deleteBtn.addEventListener('click', deleteName);
+
+</script> -->
+
+<!-- Task5 -->
+
+<!-- <button id="live">Live button!</button>
+<script>
+    let liveBtn = document.querySelector("button");
+    function showClick(){
+        let p = document.createElement("p");
+        p.innerHTML = "I was pressed!";
+        document.getElementById("live").after(p);
+    }
+    function showMouseenter(){
+        let p = document.createElement("p");
+        p.innerHTML = "Mouse on me!";
+        document.getElementById("live").after(p);
+    }
+    function showMouseleave(){
+        let p = document.createElement("p");
+        p.innerHTML = "Mouse is not on me!";
+        document.getElementById("live").after(p);
+    }
+    liveBtn.addEventListener("click", showClick);
+    liveBtn.addEventListener("mouseenter", showMouseenter);
+    liveBtn.addEventListener("mouseleave", showMouseleave);
+</script> -->
+
+<!-- Task6 -->
+
+
+
+<!-- Task7 -->
+
+<select id="all">
+    <option value="germany" id="geOpt">Germany</option>
+    <option value="usa" id="usOpt">USA</option>
+    <option value="ukraine" id="ukOpt">Ukraine</option>
+</select>
+<select id="ge" style="display: none;">
+    <option value="hamburg">Hamburg</option>
+    <option value="hanover">Hanover</option>
+    <option value="dresden">Dresden</option>
+</select>
+<select id="us" style="display: none;">
+    <option value="newyork">New York</option>
+    <option value="washington">Washington</option>
+    <option value="chikago">Chikago</option>
+</select>
+<select id="uk" style="display: none;">
+    <option value="lviv">Lviv</option>
+    <option value="kyiv">Kyiv</option>
+    <option value="lutsk">Lutsk</option>
+</select>
+<div id="div"></div>
+
+<script>
+
+let select = document.querySelectorAll("select");
+let option = document.querySelectorAll("option");
+
+let p = document.createElement("p");
+        p.innerHTML = "";
+        document.getElementById("div").append(p);
+
+function selectCountry(){
+    if(option[0].selected == true){
+        select[1].style.display = "inline-block";
+        select[2].style.display = "none";
+        select[3].style.display = "none";
+        p.innerHTML = option[0].innerHTML;
+    }else if(option[1].selected == true){
+        select[2].style.display = "inline-block";
+        select[3].style.display = "none";
+        select[1].style.display = "none";
+        p.innerHTML = option[1].innerHTML;
+    }else if(option[2].selected == true){
+        select[3].style.display = "inline-block";
+        select[2].style.display = "none";
+        select[1].style.display = "none";
+        p.innerHTML = option[2].innerHTML;
+    }
+}
+function selectCity1(){
+    switch (true) {
+    case option[3].selected:
+        p.innerHTML = option[0].innerHTML + ", " + option[3].innerHTML; break;
+    case option[4].selected:
+        p.innerHTML = option[0].innerHTML + ", " + option[4].innerHTML; break;
+    case option[5].selected:
+        p.innerHTML = option[0].innerHTML + ", " + option[5].innerHTML; break;
+    }
+}
+function selectCity2(){
+    switch (true) {
+    case option[6].selected:
+        p.innerHTML = option[1].innerHTML + ", " + option[6].innerHTML; break
+    case option[7].selected:
+        p.innerHTML = option[1].innerHTML + ", " + option[7].innerHTML; break;
+    case option[8].selected:
+        p.innerHTML = option[1].innerHTML + ", " + option[8].innerHTML; break;
+    }
+}
+function selectCity3(){
+    switch (true) {
+        case option[9].selected:
+        p.innerHTML = option[2].innerHTML + ", " + option[9].innerHTML; break;
+    case option[10].selected:
+        p.innerHTML = option[2].innerHTML + ", " + option[10].innerHTML; break;
+    case option[11].selected:
+        p.innerHTML = option[2].innerHTML + ", " + option[11].innerHTML; break;
+    }
+}
+
+select[0].addEventListener("click", selectCountry);
+select[1].addEventListener("click", selectCity1);
+select[2].addEventListener("click", selectCity2);
+select[3].addEventListener("click", selectCity3);
+
+</script>
+
+</body>
+</html>

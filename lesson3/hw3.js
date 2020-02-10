@@ -73,8 +73,7 @@ function lastElem(arr, num){
 /* Task6 */
 // Цей таск восновному запозичений з google(
 
-function capitalise(string) 
-{
+function capitalise(string) {
     string = string.split(" ");
 
     for (var i = 0, x = string.length; i < x; i++) {
