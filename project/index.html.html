@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="page.css">
+    <title>To Do List</title>
+
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header">
+                <select class="select" name="myworkday" id="">
+                    <option selected disabled>My Workday</option>
+                    <!-- prepend(option) -->
+                </select>
+                <div class="add_new_list">
+                    <input type="text" class="input">
+                    <button class="button">Add To Do List</button>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="container">
+        <div class="main_content">
+            <h1>My Workday</h1>
+            <div class="add_todo">
+                <input type="text" class="input2" id="input2">
+                <button class="button2" id="button2">+</button>
+            </div>
+            <!-- <div class="pinSet"></div>
+            <div class="pinGet">
+            <div class="add_todo" id="add_todo">
+                <div>
+                    <input type="checkbox" name="todo" id="" class="checkbox">
+                    <label for="todo" class="label">wake up</label>
+                </div>
+                <button class="button3">
+                    <p class="in_button"></p>
+                </button>
+            </div>
+            </div> -->
+            <div id="toDel"></div>
+        </div>
+    </div>
+    <!-- <script>
+        
+function getTodoInputValue() {
+let todoValue = document.querySelectorAll("input")[1].value;
+console.log(todoValue)
+// var bar = document.getElementsByTagName('p')[0].innerHTML;
+// document.getElementById('bar').innerHTML = foo + bar;
+}
+
+document.querySelectorAll('button')[1].addEventListener("click", getTodoInputValue);
+    </script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="page.js"></script>
+</body>
+
+</html>
